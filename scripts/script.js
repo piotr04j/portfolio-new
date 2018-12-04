@@ -1,0 +1,8 @@
+"use strict";
+
+var x = function x() {
+  return console.log('hello world');
+};
+
+x();
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjcmlwdC5qcyJdLCJuYW1lcyI6WyJ4IiwiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6Ijs7QUFBQSxJQUFJQSxDQUFDLEdBQUcsU0FBSkEsQ0FBSTtBQUFBLFNBQU1DLE9BQU8sQ0FBQ0MsR0FBUixDQUFZLGFBQVosQ0FBTjtBQUFBLENBQVI7O0FBRUFGLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgeCA9ICgpID0+IGNvbnNvbGUubG9nKCdoZWxsbyB3b3JsZCcpXHJcblxyXG54KCkiXSwiZmlsZSI6InNjcmlwdC5qcyJ9
