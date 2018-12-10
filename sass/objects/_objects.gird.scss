@@ -1,0 +1,31 @@
+.container {
+    max-width: $grid-width;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    max-width: 100%;
+}
+
+.row {
+
+    background-color: red;
+
+    &::after {
+        display: table;
+        content: "";
+        clear: both;
+    }
+
+    [class^="col-"] {
+        float: left;
+        background: blue;
+        font-size: 4rem;
+
+        &:not(:last-child){
+            margin-right: $grid-gutter;
+        }
+    }
+    
+
+}
