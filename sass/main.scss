@@ -1,3 +1,5 @@
+@import './settings/settings.spacing';
+@import './settings/settings.colors';
 @import './settings/settings.grid';
 
 @import './tools/tools';
@@ -9,6 +11,7 @@
 
 @import './objects/objects.gird';
 
-@import './components/components';
+@import './components/components.hero';
 
 @import './trumps/trumps';
+
