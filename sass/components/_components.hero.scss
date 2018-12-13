@@ -4,10 +4,11 @@
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     margin: $margin-small;
     position: relative;
-    background-image: linear-gradient(to bottom right, rgba($bg-main-lightest,.9), rgba($bg-main,.9));
+    background-image: linear-gradient(to bottom right, rgba($color-main-lightest,.9), rgba($color-main,.9));
     background-size: cover;
     z-index: 100;
     overflow: hidden;
+    max-height: 100rem;
 
     &__video {
 

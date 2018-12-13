@@ -1,0 +1,15 @@
+.about {
+
+    &__title {
+       @include title;
+
+        &::after {
+           @include title-underscore;
+        }
+    }
+
+    &__text {
+        margin: 0 $margin-small;
+    }
+
+}

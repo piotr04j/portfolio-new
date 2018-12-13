@@ -4,3 +4,27 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+@mixin center-align($tb: 0px) {
+    margin:  $tb auto;
+}
+
+@mixin title($cl: $color-main) {
+    position: relative;
+    font-size: 4.6rem;
+    color: $cl;
+    text-align: center;
+    width: 30rem;
+    @include center-align;
+    margin-bottom: $margin-big;
+}
+
+@mixin title-underscore($cl: $color-main) {
+    position: absolute;
+    bottom: -1rem;
+    left: -5rem;
+    width: 40rem;
+    height: 1px;
+    background: $cl;
+    content: "";
+}

@@ -4,7 +4,7 @@
     right: 9rem;
     width: 2rem;
     height: 2rem;
-    background-image: linear-gradient(to bottom right, $bg-main-lightest, $bg-main);
+    background-image: linear-gradient(to bottom right, $color-main-lightest, $color-main);
     transition: all .4s;
     border-radius: 50%;
 
@@ -35,7 +35,7 @@
         display: none;
 
         &:hover {
-            background-image: linear-gradient(to right, $bg-main-lightest, $bg-main);
+            background-image: linear-gradient(to right, $color-main-lightest, $color-main);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;

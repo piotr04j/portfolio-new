@@ -1,0 +1,35 @@
+.skills {
+
+    margin: $margin-small;
+    padding: 10rem 8rem 20rem;
+    background-image: linear-gradient(to bottom right, $color-main-lightest, $color-main);
+    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+
+    &__title {
+
+        @include title($color-white);
+
+        &::after {
+            @include title-underscore($color-white);
+        }
+    }
+}
+
+.item {
+    background: $color-white;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: .5rem solid $color-attention;
+
+    &__content {
+        transform: scale(.8);
+        filter: grayscale(100%);
+        transition: all .4s;
+    }
+
+    &:hover &__content {
+        transform: scale(1);
+        filter: grayscale(0%);
+    }
+}

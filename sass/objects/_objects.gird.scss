@@ -9,7 +9,6 @@
 
 .row {
 
-    background-color: red;
     margin: $margin-big 0;
 
     &::after {
@@ -20,7 +19,6 @@
 
     [class^="col-"] {
         float: left;
-        background: blue;
         font-size: 4rem;
 
         &:not(:last-child){
