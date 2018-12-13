@@ -5,16 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
     <script src="scripts/script.js"></script>
 </head>
 <body>
+
+    <input type="checkbox" id="menu" class="menu-input"/>
+    <label for="menu" class="btn-menu">
+        <div class="btn-menu__bar">
+            &nbsp;
+        </div>
+    </label>
+
     <nav class="navigation">
-        menu
+        <ul class="navigation__list">
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">
+                    Home
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">
+                    O mnie
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">
+                    Prace
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">
+                    Umiejętności
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link">
+                    Kontakt
+                </a>
+            </li>
+        </ul>
     </nav>
 
     <div class="hero">
-        Front-end developer
+        <div class="hero__title">
+            function piotrJałocha {
+                <h1 class="hero__title__main">
+                return <span class="hero__title__main--bold"> front-end developer</span>
+                </h1>
+            } 
+        </div>
+        <div class="hero__video">
+            <video class="hero__video__content" autoplay="true" muted="true" loop="true">
+                <source src="images/code1.mp4" type="video/mp4" />
+                <source src="images/code1.webm" type="video/webm" />
+                Your browser is not supported!
+            </video>
+        </div>
     </div>
 
     <div class="container">

@@ -1,4 +1,57 @@
+.hero {
+    height: 80vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    margin: $margin-small;
+    position: relative;
+    background-image: linear-gradient(to bottom right, rgba($bg-main-lightest,.9), rgba($bg-main,.9));
+    background-size: cover;
+    z-index: 100;
+    overflow: hidden;
 
+    &__video {
+
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: .6;
+        overflow: hidden;
+
+        &__content {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+            @supports( (not(-webkit-clip-path: polygon(0 0))) or (not(clip-path: polygon(0 0))) ){
+                height: auto;
+            }   
+
+        }
+    }
+
+    &__title {
+        @include center;
+        font-size: 6.4rem;
+        color: $color-attention;
+        line-height: 7rem;
+        letter-spacing: 1px;
+        word-spacing: 1rem;
+        text-shadow: $shadow-dark;
+
+        &__main {
+            margin-left: $padding-big;
+
+            &--bold {
+                font-weight: 700;
+            }
+        }
+    }
+
+}
 
 
 
