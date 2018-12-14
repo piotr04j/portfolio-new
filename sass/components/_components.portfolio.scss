@@ -1,0 +1,77 @@
+.portfolio {
+    
+    &__title {
+
+        @include title;
+
+        &::after {
+           @include title-underscore;
+        }
+    }
+
+    background-image: url(../images/bg-w.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__btn {
+        background: none;
+        border: none;
+        outline: none;
+        padding-right: 4rem;
+        cursor: pointer;
+
+        &:active &__icon  {
+            color: $color-main-lightest;
+        }
+
+        &:active &__icon::after  {
+            border-right: 1rem solid  $color-main-lightest;
+            border-left: 1rem solid  $color-main-lightest;
+        }
+
+        &__icon {
+            font-size: 6.4rem;
+            position: relative;
+            color: $color-main;
+            transition: all .2s;
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 50%;
+                width: .2em;
+                height: .9rem;
+                transform: translate(0,-50%);
+                border-right: 1rem solid  $color-main;
+                border-left: 1rem solid  $color-main;
+                display: none;
+                color: $color-main;
+            }
+
+        }
+
+    }
+
+    &__btn--right:hover .fa-arrow-right::after {
+        animation: arrow-right .6s infinite;
+        display: block;
+    }
+
+    &__btn--left:hover .fa-arrow-left::after {
+        animation: arrow-left .6s infinite;
+        display: block;
+    }
+
+    &__list {
+        max-width: 60%;
+        width: 100%;
+    }
+
+}

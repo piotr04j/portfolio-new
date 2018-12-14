@@ -2,7 +2,7 @@
 
     margin: $margin-small;
     padding: 10rem 8rem 20rem;
-    background-image: linear-gradient(to bottom right, $color-main-lightest, $color-main);
+    background-image: linear-gradient(to bottom right, rgba($color-main-lightest,.99), rgba($color-main,.99));
     -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
     clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
 
@@ -21,6 +21,23 @@
     border-radius: 1rem;
     overflow: hidden;
     border: .5rem solid $color-attention;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, rgba($color-main-lightest,.7), rgba($color-main,.7));
+        transition: all .4s;
+    }
+
+    &:hover::after {
+        bottom: 101%;
+    }
 
     &__content {
         transform: scale(.8);

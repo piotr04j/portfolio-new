@@ -1,0 +1,77 @@
+@keyframes btn {
+    0% {
+        height: 90%;
+        width: 90%;
+        opacity: 0;
+    }
+    50% {
+        height: 120%;
+        width: 120%;
+        opacity: 1;
+    }
+    100% {
+        height: 140%;
+        width: 140%;
+        opacity: 0;
+    }
+}
+
+@keyframes arrow-right {
+    0% {
+        left: -4rem;
+    }
+    12% {
+        left: -3.5rem;
+    }
+    25% {
+        left: -3rem;
+    }
+    37% {
+        left: -2.5rem;
+    }
+    50% {
+        left: -2rem;
+    }
+    62% {
+        left: -1.5rem;
+    }
+    75% {
+        left: -1rem;
+    }
+    87% {
+        left: -.5rem;
+    }
+    100% {
+        left: 0rem;
+    }
+}
+
+@keyframes arrow-left {
+    0% {
+        right: -4rem;
+    }
+    12% {
+        right: -3.5rem;
+    }
+    25% {
+        right: -3rem;
+    }
+    37% {
+        right: -2.5rem;
+    }
+    50% {
+        right: -2rem;
+    }
+    62% {
+        right: -1.5rem;
+    }
+    75% {
+        right: -1rem;
+    }
+    87% {
+        right: -.5rem;
+    }
+    100% {
+        right: 0rem;
+    }
+}

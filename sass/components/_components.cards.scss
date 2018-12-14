@@ -1,0 +1,115 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 85rem;
+
+
+    &:hover &__front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__back {
+        transform: rotateY(0deg);
+    }
+
+    &__front {
+        background-image: linear-gradient(to bottom right, rgba($color-main-lightest,.99), rgba($color-main,.99));
+        padding-bottom: $padding-medium;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &__photo-container {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        overflow: hidden;
+    }
+
+    &__photo {
+        max-height: 60rem;
+        object-fit: cover;        
+    }
+
+    &__list {
+
+        &__item {
+            text-align: center;
+            color: $color-attention;
+            width: 80%;
+            margin: $margin-small auto 0;
+            padding: $padding-small;
+
+            &:not(:last-child) {
+                border-bottom: 2px solid $color-attention;
+            }
+        }
+    }
+
+    &__back {
+        transform: rotateY(180deg);
+        background-image: linear-gradient(to bottom right, rgba($color-main-lightest,.99), rgba($color-main,.99));
+        border-radius: 20px;
+        overflow: hidden;
+        
+    }
+
+    &__side {
+        transition: all .8s ease;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: $shadow-medium;
+        backface-visibility: hidden;
+
+    }
+
+    &__back-btn {
+        @include center;
+        background-color: $color-white;
+        color: $color-main;
+        padding: $padding-medium;
+        border-radius: 50px;
+        text-transform: uppercase;
+        box-shadow: $shadow-light;
+        transition: all .2s;
+
+        &::before {
+            background: $color-attention;
+            @include center;
+            animation-fill-mode: backwards;
+            content: "";
+            border-radius: 50px;
+            opacity: 0;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            animation: btn .3s ease-out;
+        } 
+
+        &:active {
+            transform: scale(.95) translate(-50%,-50%);
+            box-shadow: none;
+        }
+
+    }
+
+    &__back-git {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: $margin-big;
+        width: 6rem;
+        transition: all .2s;
+        cursor: pointer;
+        background-color: transparent;
+
+        &:hover {
+            transform: scale(.9);
+        }
+    }
+}

@@ -6,6 +6,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
     <script src="scripts/script.js"></script>
 </head>
@@ -149,8 +150,72 @@
         </div>
     </section>
 
+    <section class="container portfolio">
+        <div class="row">
+            <div class="col-1-of-1">
+                <h3 class="portfolio__title">Portfolio</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-1">
+                <div class="portfolio__content">
+                    <button class="btn-prev portfolio__btn portfolio__btn--left">
+                        <span class="fas fa-arrow-left portfolio__btn__icon"></span>
+                    </button>
+
+                    <ul class="portfolio__list">
+
+                        <li class="portfolio__item">
+                            <div class="card">
+
+                                <div class="card__front card__side">
+                                    <figure class="card__photo-container">
+                                        <img src="images/portfolio/movie-app.jpg" alt="The movie app" class="card__photo">
+                                    </figure>
+                                    <ul class="card__list">
+                                        <li class="card__list__item">
+                                            React/Redux
+                                        </li>
+                                        <li class="card__list__item">
+                                            JavaScript
+                                        </li>
+                                        <li class="card__list__item">
+                                            HTML5, CSS3
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card__back card__side">
+                                    <a href="https://sheltered-caverns-17543.herokuapp.com/" class="card__back-btn" target="_blank">go to app</a>
+                                    <a href="https://github.com/piotr04j/The-movie-app" class="card__back-git" target="_blank"><img src="images/github.png" alt="github logo" ></a>
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+                    <button class="btn-next portfolio__btn portfolio__btn--right">
+                        <span class="fas fa-arrow-right portfolio__btn__icon"></span>
+                    </button>
+                </div> 
+            </div>    
+        </div>
+    </section>
    
-    
+    <section class="contact container">
+        <div class="row">
+            <div class="col-1-of-2">
+                <form action="#" class="contact__form">
+                    <input type="email" class="contact__form__mail">
+                    <textare class="contact__form__body"></textare>
+                    <input type="submit" class="contact__form__send">
+                </form>
+            </div>
+            <div class="col-1-of-2">
+                ikonki
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
