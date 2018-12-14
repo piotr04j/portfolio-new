@@ -1,0 +1,86 @@
+.contact {
+    background-image: linear-gradient(to bottom right, rgba($color-main-lightest,.99), rgba($color-main,.99));
+    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    margin: $margin-small;
+    padding: $padding-big;
+    
+    &__container {
+        @include center-align;
+        max-width: 120rem;
+        padding: $padding-big;
+        border: .5rem solid $color-attention;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex: 0 0 50%;
+        padding: $padding-medium;
+
+        &__input {
+            width: 100%;
+            font-size: 2.2rem;
+            line-height: 4.4rem;
+            margin-bottom: $margin-small;
+            border-radius: 5px;
+            font-family: Lato, sans-serif;
+            padding: 0 $padding-small;
+            color: $color-main;
+            outline: none;
+            border: 3px solid transparent;
+
+            &::-webkit-input-placeholder {
+                color: $color-main-lightest;
+            }
+
+            &::-moz-input-placeholder {
+                color: $color-main-lightest;
+            }
+
+            &::-o-input-placeholder {
+                color: $color-main-lightest;
+            }
+
+            &::-ms-input-placeholder {
+                color: $color-main-lightest;
+            }
+
+            &:focus {
+                border: 3px solid $color-attention;
+            }
+        }
+
+        &__send {
+            background-color: $color-white;
+            color: $color-main;
+            border-radius: 50px;
+            text-transform: uppercase;
+            box-shadow: $shadow-light;
+            transition: all .2s;
+            border: none;
+            outline: none;
+            font-size: 2.2rem;
+            padding: $padding-small;
+            border-radius: 4px;
+            display: block;
+            cursor: pointer;
+            position: relative;
+
+
+         
+        }
+    }
+
+
+    &__info {
+        flex: 0 0 50%;
+        padding: $padding-small;
+    }
+}
