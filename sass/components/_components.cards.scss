@@ -106,10 +106,11 @@
         width: 6rem;
         transition: all .2s;
         cursor: pointer;
+        transform: scale(.9);
         background-color: transparent;
 
         &:hover {
-            transform: scale(.9);
+            transform: scale(1);
         }
     }
 }

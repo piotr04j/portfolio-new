@@ -1,0 +1,15 @@
+.footer {
+
+    padding: $padding-small;
+
+    &__text {
+        text-align: center;
+        font-size: 2.2rem;
+        line-height: 4.4rem;
+        color: $color-main;
+    }
+
+    &__link {
+        color: $color-main-lightest;
+    }
+}

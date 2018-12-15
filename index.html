@@ -46,6 +46,9 @@
                     Kontakt
                 </a>
             </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link__lang navigation__link__lang--active">PL</a><a href="#" class="navigation__link__lang navigation__link__lang--inactive">EN</a>
+            </li>
         </ul>
     </nav>
 
@@ -205,6 +208,11 @@
     <section class="container-fluid contact">
         <div class="row">
             <div class="col-1-of-1">
+                <h3 class="contact__title">Kontakt</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-1">
                 <div class="contact__container">
                     <form action="#" class="contact__form">
                         <input type="email" class="contact__form__mail contact__form__input" placeholder="Twój e-mail...">
@@ -212,12 +220,38 @@
                         <input type="submit" class="contact__form__send">
                     </form>
                     <div class="contact__info">
-                        sss
+                        <p class="contact__info__text">Sprawdź</p>
+                        <a href="#" class="contact__info__link">
+                            <svg class="contact__info__icon contact__info__icon-front">
+                                <use xlink:href="images/sprites.svg#github"></use>
+                            </svg>
+                            <div class="contact__info__icon contact__info__icon-middle">
+                                &nbsp;
+                            </div>
+                            <svg class="contact__info__icon contact__info__icon-back">
+                                <use xlink:href="images/sprites.svg#github"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="contact__info__link">
+                            <svg class="contact__info__icon  contact__info__icon-front" >
+                                <use xlink:href="images/sprites.svg#linkedin">
+                            </svg>
+                            <div class="contact__info__icon contact__info__icon-middle">
+                                &nbsp;
+                            </div>
+                            <svg class="contact__info__icon contact__info__icon-back">
+                                <use xlink:href="images/sprites.svg#linkedin"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <footer class="footer">
+        <p class="footer__text">Created by Piotr Jałocha &copy; | Ikony z <a href="http://www.freepik.com" target="_blank" class="footer__link">Freepik</a></p>
+    </footer>
 
 </body>
 </html>

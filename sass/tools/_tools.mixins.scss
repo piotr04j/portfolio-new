@@ -16,7 +16,7 @@
     text-transform: uppercase;
     text-align: center;
     width: 30rem;
-    @include center-align;
+    @include center-align($margin-medium);
     margin-bottom: $margin-big;
 }
 

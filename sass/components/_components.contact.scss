@@ -4,16 +4,28 @@
     clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
     margin: $margin-small;
     padding: $padding-big;
+
+    &__title {
+        @include title($color-white);
+
+        &::before {
+            @include title-underscore ($color-white);
+        }
+    }
     
     &__container {
         @include center-align;
-        max-width: 120rem;
+        max-width: 100rem;
         padding: $padding-big;
         border: .5rem solid $color-attention;
-        border-radius: 5px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-around;
+        transform: skewY(-4deg);
+
+        & > * {
+            transform: skewY(4deg);
+        }
     }
 
     &__form {
@@ -21,7 +33,7 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        flex: 0 0 50%;
+        flex: 2;
         padding: $padding-medium;
 
         &__input {
@@ -58,9 +70,8 @@
         }
 
         &__send {
-            background-color: $color-white;
+            background-color: $color-attention;
             color: $color-main;
-            border-radius: 50px;
             text-transform: uppercase;
             box-shadow: $shadow-light;
             transition: all .2s;
@@ -69,18 +80,83 @@
             font-size: 2.2rem;
             padding: $padding-small;
             border-radius: 4px;
-            display: block;
             cursor: pointer;
-            position: relative;
+            transition: transform .3s;
 
+            &:hover {
+                box-shadow: 0 0 2rem rgba($color-attention,.6);
+            }
 
-         
+            &:active {
+                box-shadow: none;
+                transform: scale(.9);
+            } 
+
         }
     }
 
-
     &__info {
-        flex: 0 0 50%;
+        flex: 1;
         padding: $padding-small;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: $padding-medium;
+
+        &__text {
+            font-size: 2.2rem;
+            line-height: 4.4rem;
+            text-transform: uppercase;
+            color: $color-white;
+        }
+
+        &__link {
+            position: relative;
+            perspective: 150rem;
+            -moz-perspective: 150rem;
+            display: block;
+            position: relative;
+            margin: $margin-big 0;
+
+
+            &:hover .contact__info__icon-front {
+                transform: translate(-50%,-50%) rotateY(-180deg);
+            }
+            &:hover .contact__info__icon-middle {
+                transform: translate(-50%,-50%) rotateY(-90deg);
+            }
+            &:hover .contact__info__icon-back {
+                transform: translate(-50%,-50%) rotateY(0);
+            }
+        }
+
+        &__icon{
+            width: 6rem;
+            height: 6rem;
+            margin: $margin-small;
+            position: absolute;
+            transition: all 1s;
+            backface-visibility: hidden;
+            box-shadow: $shadow-light;
+            transform-origin: right;
+            left: 50%;
+            top: 50%;
+
+            &-middle {
+                background-color: $color-main-lighter;
+                transform: translate(-50%,-50%) rotateY(90deg);
+            }
+
+            &-back {
+                fill: $color-white;
+                transform: translate(-50%,-50%) rotateY(180deg);
+            }
+
+            &-front {
+                fill: $color-attention;
+                transform: translate(-50%,-50%);
+            }
+        }
     }
 }

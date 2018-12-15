@@ -59,7 +59,69 @@
             width: 150%;
             transform: skewX(0deg);
         }
-   }
+
+        &__lang {
+            color: $color-white;
+            font-size: 3.2rem;
+            text-transform: uppercase;
+            padding:  $padding-small $padding-medium;
+            transition: all .3s;
+            font-weight: 700;
+            letter-spacing: 1px;
+            backface-visibility: hidden;
+            overflow: hidden;
+            display: none;
+
+            &--inactive {
+                transition: all .3s;
+                
+                &:hover::after {
+                    opacity: 1;
+                }
+                
+                &:hover {
+                    color: $color-main;
+                }
+
+                position: relative;
+                color: $color-white;
+
+                &::after {
+                    background: $color-attention;
+                    position: absolute;
+                    width: 100%;
+                    height: 60%;
+                    content: "";
+                    top: 1rem;
+                    right:  -15%;
+                    transform: skewX(-45deg);
+                    z-index: -1;
+                    opacity: 0;    
+                    transition: all .3s;
+                }
+    
+            }
+
+            &--active {
+
+                position: relative;
+                color: $color-main;
+            
+                &::after {
+                    background: $color-white;
+                    position: absolute;
+                    width: 100%;
+                    height: 60%;
+                    content: "";
+                    top: 1rem;
+                    left: -15%;
+                    transform: skewX(-45deg);
+                    transition: all .3s;
+                    z-index: -1;
+                }
+            }
+        }
+    }
 }
 
 .btn-menu {
@@ -128,6 +190,10 @@
 
     &:checked ~ .navigation  .navigation__link {
         display: block;
+    }
+
+    &:checked ~ .navigation  .navigation__link__lang {
+        display: inline-block;
     }
 
     &:checked + .btn-menu .btn-menu__bar {
