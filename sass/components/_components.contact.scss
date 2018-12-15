@@ -1,15 +1,24 @@
 .contact {
     background-image: linear-gradient(to bottom right, rgba($color-main-lightest,.99), rgba($color-main,.99));
-    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
     margin: $margin-small;
     padding: $padding-big;
+       
+    @include respond(extra-small){
+        padding: $padding-big $padding-small;
+        margin: 0;
+    }
 
     &__title {
         @include title($color-white);
 
         &::before {
             @include title-underscore ($color-white);
+              
+            @include respond(extra-small){
+                left: -1rem;
+            }
         }
     }
     
@@ -23,6 +32,17 @@
         justify-content: space-around;
         transform: skewY(-4deg);
 
+        @include respond(small){
+            flex-direction: column;
+            padding: $padding-medium;
+        }
+
+        @include respond(extra-small){
+            max-width: 100%;
+            border: none;
+            padding: 0;
+        }
+
         & > * {
             transform: skewY(4deg);
         }
@@ -35,6 +55,14 @@
         align-items: center;
         flex: 2;
         padding: $padding-medium;
+
+        @include respond(small){
+            width: 100%;
+        }
+
+        @include respond(extra-small){
+            padding: 0;
+        }
 
         &__input {
             width: 100%;
@@ -104,11 +132,28 @@
         align-items: center;
         padding: $padding-medium;
 
+        @include respond(small){
+            padding: 0;
+        }
+
+        @include respond(small){
+            flex-direction: row;
+        }
+
+        @include respond(extra-small){
+            width: 100%;
+            justify-content: flex-start;
+        }
+
         &__text {
             font-size: 2.2rem;
             line-height: 4.4rem;
             text-transform: uppercase;
             color: $color-white;
+
+            @include respond(small){
+                display: none;
+            }
         }
 
         &__link {
@@ -118,6 +163,10 @@
             display: block;
             position: relative;
             margin: $margin-big 0;
+
+            @include respond(small){
+                margin: $margin-big;
+            }
 
 
             &:hover .contact__info__icon-front {

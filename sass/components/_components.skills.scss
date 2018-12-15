@@ -3,12 +3,31 @@
     margin: $margin-small;
     padding: 10rem 8rem 20rem;
     background-image: linear-gradient(to bottom right, rgba($color-main-lightest,.99), rgba($color-main,.99));
-    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
-    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+
+    
+    @include respond(medium){
+        padding: 15rem 4rem 20rem;
+    }
+
+    @include respond(small){
+        padding: 10rem 3rem 15rem;
+    }
+
+    @include respond(extra-small){
+        -webkit-clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
+        clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
+        margin: 0;
+    }
 
     &__title {
 
         @include title($color-white);
+        
+        @include respond(extra-small){
+            width: 100%;
+        }
 
         &::after {
             @include title-underscore($color-white);
@@ -23,6 +42,10 @@
     border: .5rem solid $color-attention;
     overflow: hidden;
     position: relative;
+
+    @include respond(extra-small){
+        margin: 1rem;
+    }
 
     &::after {
         position: absolute;

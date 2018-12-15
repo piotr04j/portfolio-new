@@ -10,9 +10,16 @@
     overflow: hidden;
     max-height: 100rem;
 
+    @include respond(small){
+        height: 50vh;
+    }
+
+    @include respond(extra-small){
+        margin: 0;
+    }
+
     &__video {
 
-        
         position: absolute;
         top: 0;
         left: 0;
@@ -36,15 +43,36 @@
 
     &__title {
         @include center;
-        font-size: 6.4rem;
+        font-size: 3.3333333333333335vw;
         color: $color-attention;
-        line-height: 7rem;
+        line-height: 3.6458333333333335vw;
         letter-spacing: 1px;
         word-spacing: 1rem;
         text-shadow: $shadow-dark;
 
+        @include respond(large){
+            font-size: 3vw;
+            line-height: 4rem;
+        }
+        
+        @include respond(medium){
+            font-size: 3.6rem;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @include respond(small){
+            font-size: 3rem;
+            width: 90%;
+        }
+
+        @include respond(extra-small){
+            font-size: 1.8rem;
+            line-height: 2rem;
+        }
+      
         &__main {
-            margin-left: $padding-big;
+            margin-left: 2.604166666666667vw;
 
             &--bold {
                 font-weight: 700;

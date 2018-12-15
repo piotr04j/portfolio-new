@@ -18,6 +18,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include respond(extra-small){
+            flex-wrap: wrap;
+        }
     }
 
     &__btn {
@@ -26,6 +30,23 @@
         outline: none;
         padding-right: 4rem;
         cursor: pointer;
+        @include respond(extra-small){
+            margin: $margin-medium;
+        }
+
+        &--left {
+            @include respond(extra-small){
+                order: 2;
+                margin-left: 2rem;
+            }
+        }
+
+        &--right {
+            @include respond(extra-small){
+                order: 3;
+                margin-right: 2rem;
+            }
+        }
 
         &:active &__icon  {
             color: $color-main-lightest;
@@ -72,6 +93,10 @@
     &__list {
         max-width: 60%;
         width: 100%;
+
+        @include respond(extra-small){
+            max-width: 100%;
+        }
     }
 
 }

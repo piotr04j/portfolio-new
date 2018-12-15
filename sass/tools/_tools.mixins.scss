@@ -18,6 +18,14 @@
     width: 30rem;
     @include center-align($margin-medium);
     margin-bottom: $margin-big;
+
+    @include respond(small){
+        font-size: 3rem;
+    }
+
+    @include respond(extra-small){
+        width: 80%;
+    }
 }
 
 @mixin title-underscore($cl: $color-main) {
@@ -28,4 +36,25 @@
     height: 1px;
     background: $cl;
     content: "";
+
+    @include respond(extra-small){
+        width: 25rem;
+        left: 1rem;
+    }
+}
+
+@mixin respond($br){
+    @if $br == large {
+        @media only screen and (max-width: 1199.98px) { @content };
+    }
+    @if $br == medium {
+        @media only screen and (max-width: 991.98px) { @content };
+    }
+    @if $br == small {
+        @media only screen and (max-width: 767.98px) { @content };
+    }
+    @if $br == extra-small {
+        @media only screen and (max-width: 575.98px) { @content };
+    }
+    
 }

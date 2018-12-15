@@ -11,6 +11,10 @@
 
     margin: $margin-big 0;
 
+    @include respond(medium){
+        margin: 0;
+    }
+
     &::after {
         display: table;
         content: "";
@@ -21,14 +25,35 @@
         float: left;
         font-size: 4rem;
 
+        @include respond(medium){
+            margin: 1rem;
+        }
+        
+        @include respond(extra-small){
+            margin: 0;
+        }
+
         &:not(:last-child){
             margin-right: $grid-gutter;
+    
+            @include respond(medium){
+                margin-right: 0;
+            }
         }
     }
 
     .col-1-of-6 {
         width: calc( (100% - (5 * #{$grid-gutter})) / 6 );
+
+        @include respond(medium){
+            width: calc( (100% - 4rem) / 3 );
+        }
+
+        @include respond(extra-small){
+            width: calc(100%);
+        }
     }
+    
     .col-1-of-3 {
         width: calc( (100% - (2 * #{$grid-gutter})) / 3 );
     }

@@ -10,6 +10,14 @@
 
     &__text {
         margin: 0 $margin-small;
+
+        @include respond(medium){
+            padding: 0 $padding-medium;
+        }
+
+        @include respond(medium){
+            padding: 0 $padding-small;
+        }
     }
 
 }

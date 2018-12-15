@@ -7,6 +7,13 @@
     background-image: linear-gradient(to bottom right, $color-main-lightest, $color-main);
     transition: all .4s;
     border-radius: 50%;
+    
+    @include respond(small){
+        top: 2rem;
+        right: 7rem;
+        width: 1rem;
+        height: 1rem;
+    }
 
     &__list {
         @include center;
@@ -141,6 +148,19 @@
     transform: scale(.9);
     transition: all .4s;
 
+       
+    @include respond(small){
+        top: 3rem;
+        right: 3rem;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    @include respond(extra-small){
+        top: 1rem;
+        right: 6rem;
+    }
+
     &:active {
         transform: scale(1);
         
@@ -152,6 +172,11 @@
         width: 60%;
         background-color: $color-black;
         transition: all .4s;
+
+               
+        @include respond(small){
+            width: 50%;
+        }
 
         &::before,
         &::after {
