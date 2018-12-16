@@ -25,9 +25,13 @@
                     $.ajax({
                         method: "POST",
                         data: data,
-                        url: "/send.php"
+                        url: "/send.php",
+                        success: (res) => {
+                            if(res === 'SUCCESS'){
+                                
+                            }
+                        }
                     })
-                    console.log(data)
                 })
             },
             carouselInit: function(){
@@ -47,25 +51,25 @@
                     if($(this).hasClass('portfolio__btn--left')){
                         if(self.dataItem === 0){
                             self.dataItem = self.lengthItemPortfolio -1;
-                            console.log(self.dataItem)
                             self.carouselInit()
                         } else {
                             self.dataItem--;
-                            console.log(self.dataItem)
                             self.carouselInit()
                         }
                     } else {
                         if(self.dataItem === self.lengthItemPortfolio -1){
                             self.dataItem = 0;
-                            console.log(self.dataItem)
                             self.carouselInit()
                         } else {
                             self.dataItem++;
-                            console.log(self.dataItem)
                             self.carouselInit()
                         }
                     }
-                })
+
+                    $('body, html').animate({
+                        scrollTop: $('#portfolio').offset().top
+                    },600)
+                });       
             }
 
 

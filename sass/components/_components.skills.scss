@@ -3,12 +3,14 @@
     margin: $margin-small;
     padding: 10rem 8rem 20rem;
     background-image: linear-gradient(to bottom right, rgba($color-main-lightest,.99), rgba($color-main,.99));
-    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 20%, 100% 0, 100% 90%, 0 100%);
 
     
     @include respond(medium){
         padding: 15rem 4rem 20rem;
+        -webkit-clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
+        clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
     }
 
     @include respond(small){
@@ -16,8 +18,6 @@
     }
 
     @include respond(extra-small){
-        -webkit-clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
-        clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
         margin: 0;
     }
 

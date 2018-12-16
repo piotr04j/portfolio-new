@@ -10,7 +10,7 @@
     
     @include respond(small){
         top: 2rem;
-        right: 7rem;
+        right: 2rem;
         width: 1rem;
         height: 1rem;
     }
@@ -151,14 +151,14 @@
        
     @include respond(small){
         top: 3rem;
-        right: 3rem;
+        right: 2rem;
         width: 5rem;
         height: 5rem;
     }
 
     @include respond(extra-small){
         top: 1rem;
-        right: 6rem;
+        right: 1rem;
     }
 
     &:active {
