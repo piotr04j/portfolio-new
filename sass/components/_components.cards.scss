@@ -2,7 +2,7 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 85rem;
+    height: 70rem;
 
     @include respond(medium){
         height: auto;
@@ -42,7 +42,7 @@
     }
 
     &__photo {
-        max-height: 60rem;
+        max-height: 34rem;
         object-fit: cover;        
     }
 
@@ -74,6 +74,7 @@
         @include respond(medium){
             background-image: none;
             transform: rotateY(0);
+            min-height: 20rem;
         }
         
     }

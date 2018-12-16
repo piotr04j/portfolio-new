@@ -4,11 +4,13 @@
     <!--[if IE]><html class="ie" lang="pl"> <![endif]-->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="scripts/script.js"></script>
 </head>
 <body>
@@ -23,27 +25,27 @@
     <nav class="navigation">
         <ul class="navigation__list">
             <li class="navigation__item">
-                <a href="#" class="navigation__link">
+                <a href="#home" class="navigation__link">
                     Home
                 </a>
             </li>
             <li class="navigation__item">
-                <a href="#" class="navigation__link">
+                <a href="#about" class="navigation__link">
                     O mnie
                 </a>
             </li>
             <li class="navigation__item">
-                <a href="#" class="navigation__link">
+                <a href="#skills" class="navigation__link">
                     Umiejętności
                 </a>
             </li>
             <li class="navigation__item">
-                <a href="#" class="navigation__link">
+                <a href="#portoflio" class="navigation__link">
                     Prace
                 </a>
             </li>
             <li class="navigation__item">
-                <a href="#" class="navigation__link">
+                <a href="#contact" class="navigation__link">
                     Kontakt
                 </a>
             </li>
@@ -53,7 +55,7 @@
         </ul>
     </nav>
 
-    <div class="hero">
+    <div class="hero" id="home">
         <div class="hero__title">
             function piotrJałocha {
                 <h1 class="hero__title__main">
@@ -70,7 +72,7 @@
         </div>
     </div>
 
-    <section class="about container">
+    <section class="about container" id="about">
         <div class="row">
             <div class="col-1-of-1">
                 <h3 class="about__title">O mnie</h3>
@@ -82,7 +84,7 @@
         </div>
     </section>
 
-    <section class="skills container-fluid">
+    <section class="skills container-fluid" id="skills">
         <div class="row">
             <div class="col-1-of-1">
                 <h3 class="skills__title">Umiejętności</h3>
@@ -154,7 +156,7 @@
         </div>
     </section>
 
-    <section class="container portfolio">
+    <section class="container portfolio" id="portoflio">
         <div class="row">
             <div class="col-1-of-1">
                 <h3 class="portfolio__title">Portfolio</h3>
@@ -169,7 +171,7 @@
 
                     <ul class="portfolio__list">
 
-                        <li class="portfolio__item">
+                        <li class="portfolio__item" data-item="0">
                             <div class="card">
 
                                 <div class="card__front card__side">
@@ -184,13 +186,166 @@
                                             JavaScript
                                         </li>
                                         <li class="card__list__item">
-                                            HTML5, CSS3
+                                            HTML5, BOOTSTRAP
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="card__back card__side">
                                     <a href="https://sheltered-caverns-17543.herokuapp.com/" class="card__back-btn" target="_blank">go to app</a>
                                     <a href="https://github.com/piotr04j/The-movie-app" class="card__back-git" target="_blank"><img src="images/github.png" alt="github logo" ></a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="portfolio__item" data-item="1">
+                            <div class="card">
+
+                                <div class="card__front card__side">
+                                    <figure class="card__photo-container">
+                                        <img src="images/portfolio/pig-app.jpg" alt="The movie app" class="card__photo">
+                                    </figure>
+                                    <ul class="card__list">
+                                        <li class="card__list__item">
+                                            Vanilla JS
+                                        </li>
+                                        <li class="card__list__item">
+                                            CSS3
+                                        </li>
+                                        <li class="card__list__item">
+                                            HTML5
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card__back card__side">
+                                    <a href="http://piotrjalocha.com/works/dices/index.html" class="card__back-btn" target="_blank">go to app</a>
+                                    <a href="https://github.com/piotr04j/portfolio__dice" class="card__back-git" target="_blank"><img src="images/github.png" alt="github logo" ></a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="portfolio__item" data-item="2">
+                            <div class="card">
+
+                                <div class="card__front card__side">
+                                    <figure class="card__photo-container">
+                                        <img src="images/portfolio/stanley-shop.jpg" alt="The movie app" class="card__photo">
+                                    </figure>
+                                    <ul class="card__list">
+                                        <li class="card__list__item">
+                                            jQuery
+                                        </li>
+                                        <li class="card__list__item">
+                                            HTML5, CSS3
+                                        </li>
+                                        <li class="card__list__item">
+                                            PrestShop
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card__back card__side">
+                                    <a href="https://stanleytools.com.pl/" class="card__back-btn" target="_blank">go to shop</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="portfolio__item" data-item="3">
+                            <div class="card">
+
+                                <div class="card__front card__side">
+                                    <figure class="card__photo-container">
+                                        <img src="images/portfolio/skrawtech-shop.jpg" alt="The movie app" class="card__photo">
+                                    </figure>
+                                    <ul class="card__list">
+                                        <li class="card__list__item">
+                                            jQuery
+                                        </li>
+                                        <li class="card__list__item">
+                                            HTML5, CSS3
+                                        </li>
+                                        <li class="card__list__item">
+                                            PrestShop
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card__back card__side">
+                                    <a href="https://www.skrawtech.pl" class="card__back-btn" target="_blank">go to shop</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="portfolio__item" data-item="4">
+                            <div class="card">
+
+                                <div class="card__front card__side">
+                                    <figure class="card__photo-container">
+                                        <img src="images/portfolio/wiscop-site.jpg" alt="The movie app" class="card__photo">
+                                    </figure>
+                                    <ul class="card__list">
+                                        <li class="card__list__item">
+                                            jQuery
+                                        </li>
+                                        <li class="card__list__item">
+                                            HTML5, CSS3
+                                        </li>
+                                        <li class="card__list__item">
+                                            Joomla
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card__back card__side">
+                                    <a href="https://wiscop.pl/" class="card__back-btn" target="_blank">go to site</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="portfolio__item" data-item="5">
+                            <div class="card">
+
+                                <div class="card__front card__side">
+                                    <figure class="card__photo-container">
+                                        <img src="images/portfolio/burger-site.jpg" alt="The movie app" class="card__photo">
+                                    </figure>
+                                    <ul class="card__list">
+                                        <li class="card__list__item">
+                                            HTML5, CSS3
+                                        </li>
+                                        <li class="card__list__item">
+                                            Vanilla JS
+                                        </li>
+                                        <li class="card__list__item">
+                                            SASS
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card__back card__side">
+                                    <a href="http://piotrjalocha.com/works/burger/index.html" class="card__back-btn" target="_blank">go to site</a>
+                                    <a href="https://github.com/piotr04j/potfolio__burger" class="card__back-git" target="_blank"><img src="images/github.png" alt="github logo" ></a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="portfolio__item" data-item="6">
+                            <div class="card">
+
+                                <div class="card__front card__side">
+                                    <figure class="card__photo-container">
+                                        <img src="images/portfolio/flex-site.jpg" alt="The movie app" class="card__photo">
+                                    </figure>
+                                    <ul class="card__list">
+                                        <li class="card__list__item">
+                                            HTML5, CSS3
+                                        </li>
+                                        <li class="card__list__item">
+                                            Vanilla JS
+                                        </li>
+                                        <li class="card__list__item">
+                                            Flexbox
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card__back card__side">
+                                    <a href="http://piotrjalocha.com/works/flex/index.html" class="card__back-btn" target="_blank">go to site</a>
+                                    <a href="https://github.com/piotr04j/portoflio__flexbox" class="card__back-git" target="_blank"><img src="images/github.png" alt="github logo" ></a>
                                 </div>
                             </div>
                         </li>
@@ -206,7 +361,7 @@
         </div>
     </section>
    
-    <section class="container-fluid contact">
+    <section class="container-fluid contact" id="contact">
         <div class="row">
             <div class="col-1-of-1">
                 <h3 class="contact__title">Kontakt</h3>
@@ -215,9 +370,9 @@
         <div class="row">
             <div class="col-1-of-1">
                 <div class="contact__container">
-                    <form action="#" class="contact__form">
-                        <input type="email" class="contact__form__mail contact__form__input" placeholder="Twój e-mail...">
-                        <textarea class="contact__form__body contact__form__input" placeholder="Treś wiadomości" rows="4"></textarea>
+                    <form action="/send.php" class="contact__form" id="form-mail">
+                        <input type="email" class="contact__form__mail contact__form__input" name="mail" placeholder="Twój e-mail...">
+                        <textarea class="contact__form__body contact__form__input" name="body" placeholder="Treś wiadomości" rows="4"></textarea>
                         <input type="submit" class="contact__form__send">
                     </form>
                     <div class="contact__info">
