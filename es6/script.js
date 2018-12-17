@@ -22,13 +22,21 @@
                 $('#form-mail').submit( function(e){
                     e.preventDefault();
                     const data = $(this).serialize();
-                    console.log(data)
                     $.ajax({
                         method: "POST",
                         data: data,
                         url: "/send.php",
                         success: (res) => {
-                            console.log(res)
+                            if(res === "Success"){
+                               
+                                $('.contact__form__send').prop('disabled', true);
+                                $('.contact__form__send').css({'backgroundColor': '#ccc'})
+                                $('.contact__form__send').val('wysłano');
+
+                                $('.contact__form__send--en').prop('disabled', true);
+                                $('.contact__form__send--en').css({'backgroundColor': '#ccc'})
+                                $('.contact__form__send--en').val('sent');
+                            }
                         }
                     })
                 })
