@@ -22,14 +22,13 @@
                 $('#form-mail').submit( function(e){
                     e.preventDefault();
                     const data = $(this).serialize();
+                    console.log(data)
                     $.ajax({
                         method: "POST",
                         data: data,
                         url: "/send.php",
                         success: (res) => {
-                            if(res === 'SUCCESS'){
-                                
-                            }
+                            console.log(res)
                         }
                     })
                 })
@@ -70,16 +69,20 @@
                         scrollTop: $('#portfolio').offset().top
                     },600)
                 });       
+            },
+            ieHandler: () => {
+                if($('.footer').css('background-color') === 'rgb(204, 204, 204)'){
+                    $('body').html('<h1 style="font-size: 5rem;font-weight: 400;margin: 3rem;">Your browser is deprecated. Please use a newer browser.</h1>');
+                } 
+            },
+            init: function(){
+                this.menuHandler();
+                this.formHandler();
+                this.carouselInit();
+                this.carouselHandler();
+                this.ieHandler();
             }
-
-
-
         }
-
-        site.menuHandler();
-        site.formHandler();
-        site.carouselInit();
-        site.carouselHandler();
-
+    site.init();
     });
 })(jQuery);

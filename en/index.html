@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/style/style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="scripts/script.js"></script>
+    <script src="/scripts/script.js"></script>
 </head>
-<body >
+<body class="en">
 
     <input type="checkbox" id="menu" class="menu-input"/>
     <label for="menu" class="btn-menu">
@@ -30,12 +30,12 @@
             </li>
             <li class="navigation__item">
                 <a href="#about" class="navigation__link">
-                    O mnie
+                    About
                 </a>
             </li>
             <li class="navigation__item">
                 <a href="#skills" class="navigation__link">
-                    Umiejętności
+                    Skills
                 </a>
             </li>
             <li class="navigation__item">
@@ -45,11 +45,11 @@
             </li>
             <li class="navigation__item">
                 <a href="#contact" class="navigation__link">
-                    Kontakt
+                    Contact
                 </a>
             </li>
             <li class="navigation__item">
-                <a href="#" class="navigation__link__lang  navigation__link__lang--active">PL</a><a href="en/index.html" class="navigation__link__lang navigation__link__lang--inactive">EN</a>
+                <a href="../index.html" class="navigation__link__lang navigation__link__lang--inactive">PL</a><a href="#" class="navigation__link__lang navigation__link__lang--active">EN</a>
             </li>
         </ul>
     </nav>
@@ -64,8 +64,8 @@
         </div>
         <div class="hero__video">
             <video class="hero__video__content" autoplay="true" muted="true" loop="true">
-                <source src="images/code1.mp4" type="video/mp4" />
-                <source src="images/code1.webm" type="video/webm" />
+                <source src="/images/code1.mp4" type="video/mp4" />
+                <source src="/images/code1.webm" type="video/webm" />
                 Your browser is not supported!
             </video>
         </div>
@@ -74,14 +74,14 @@
     <section class="about container" id="about">
         <div class="row">
             <div class="col-1-of-1">
-                <h3 class="about__title">O mnie</h3>
+                <h3 class="about__title">About</h3>
                 <p class="about__text">
-                    Jestem front-end developerem z doświadczeniem w projektach komercyjnych. Przykładam dużą wagę do detali i jakości kodu.
-                    Mam na swoim koncie realizacje kilkudziesięciu sklepów (PrestaShop) oraz stron internetowych (Wordpress, Joomla).
-                    Z częścią z nich możesz zapoznać się w sekcji portfolio. 
-                    Koduję nie tylko na potrzeby zlecanych projektów, ale także w czasie wolnym, bo programowanie to dla mnie coś więcej niż tylko praca.
-                    Poza tym lubię obejrzeć ciekawy film, przeczytać dobrą książkę lub zagrać w fajną grę. 
-                    W czasie urlopu można mnie spotkać najczęściej w Karkonoszach.
+                    I'm a front-end developer with experience in commercial projects.
+                    I have completed dozens of shops (PrestaShop) and websites (Wordpress, Joomla).
+                    Some of them you can check in portfolio section.
+                    For me coding is something more than work, so I write code in my free time as well.
+                    Beside I like watch an interesting filme, read a good book or cool games. 
+                    During the holiday you can meet me in the Polish mountains.
                 </p>
             </div>
         </div>
@@ -90,70 +90,70 @@
     <section class="skills container-fluid" id="skills">
         <div class="row">
             <div class="col-1-of-1">
-                <h3 class="skills__title">Umiejętności</h3>
+                <h3 class="skills__title">Skills</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/html.png" alt="logo html 5" class="item__content">
+                    <img src="/images/technologies/html.png" alt="logo html 5" class="item__content">
                 </figure>
             </div>
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/css.png" alt="logo css 3" class="item__content">
+                    <img src="/images/technologies/css.png" alt="logo css 3" class="item__content">
                 </figure>
             </div>
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/js.png" alt="logo js" class="item__content">
+                    <img src="/images/technologies/js.png" alt="logo js" class="item__content">
                 </figure>
             </div>
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/jq.png" alt="logo jquery" class="item__content">
+                    <img src="/images/technologies/jq.png" alt="logo jquery" class="item__content">
                 </figure>
             </div>
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/gulp.png" alt="logo gulp" class="item__content">
+                    <img src="/images/technologies/gulp.png" alt="logo gulp" class="item__content">
                 </figure>
             </div>
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/react.png" alt="logo react js" class="item__content">
+                    <img src="/images/technologies/react.png" alt="logo react js" class="item__content">
                 </figure>
             </div>
         </div>
         <div class="row">
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/git.png" alt="logo git" class="item__content">
+                    <img src="/images/technologies/git.png" alt="logo git" class="item__content">
                 </figure>
             </div>
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/sass.png" alt="logo sass" class="item__content">
+                    <img src="/images/technologies/sass.png" alt="logo sass" class="item__content">
                 </figure>
             </div>
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/wp.png" alt="logo wordpress" class="item__content">
+                    <img src="/images/technologies/wp.png" alt="logo wordpress" class="item__content">
                 </figure>
             </div>
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/joomla.png" alt="logo joomla" class="item__content">
+                    <img src="/images/technologies/joomla.png" alt="logo joomla" class="item__content">
                 </figure>
             </div>
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/ps.png" alt="logo prestashop" class="item__content">
+                    <img src="/images/technologies/ps.png" alt="logo prestashop" class="item__content">
                 </figure>
             </div>
             <div class="col-1-of-6">
                 <figure class="item">
-                    <img src="images/technologies/npm.png" alt="logo npm" class="item__content">
+                    <img src="/images/technologies/npm.png" alt="logo npm" class="item__content">
                 </figure>
             </div>
         </div>
@@ -179,7 +179,7 @@
 
                                 <div class="card__front card__side">
                                     <figure class="card__photo-container">
-                                        <img src="images/portfolio/movie-app.jpg" alt="The movie app" class="card__photo">
+                                        <img src="/images/portfolio/movie-app.jpg" alt="The movie app" class="card__photo">
                                     </figure>
                                     <ul class="card__list">
                                         <li class="card__list__item">
@@ -194,8 +194,8 @@
                                     </ul>
                                 </div>
                                 <div class="card__back card__side">
-                                    <a href="https://sheltered-caverns-17543.herokuapp.com/" class="card__back-btn" target="_blank">zobacz</a>
-                                    <a href="https://github.com/piotr04j/The-movie-app" class="card__back-git" target="_blank"><img src="images/github.png" alt="github logo" ></a>
+                                    <a href="https://sheltered-caverns-17543.herokuapp.com/" class="card__back-btn" target="_blank">go to app</a>
+                                    <a href="https://github.com/piotr04j/The-movie-app" class="card__back-git" target="_blank"><img src="/images/github.png" alt="github logo" ></a>
                                 </div>
                             </div>
                         </li>
@@ -205,7 +205,7 @@
 
                                 <div class="card__front card__side">
                                     <figure class="card__photo-container">
-                                        <img src="images/portfolio/pig-app.jpg" alt="The movie app" class="card__photo">
+                                        <img src="/images/portfolio/pig-app.jpg" alt="The movie app" class="card__photo">
                                     </figure>
                                     <ul class="card__list">
                                         <li class="card__list__item">
@@ -220,8 +220,8 @@
                                     </ul>
                                 </div>
                                 <div class="card__back card__side">
-                                    <a href="http://piotrjalocha.com/works/dices/index.html" class="card__back-btn" target="_blank">zobacz</a>
-                                    <a href="https://github.com/piotr04j/portfolio__dice" class="card__back-git" target="_blank"><img src="images/github.png" alt="github logo" ></a>
+                                    <a href="http://piotrjalocha.com/works/dices/index.html" class="card__back-btn" target="_blank">go to app</a>
+                                    <a href="https://github.com/piotr04j/portfolio__dice" class="card__back-git" target="_blank"><img src="/images/github.png" alt="github logo" ></a>
                                 </div>
                             </div>
                         </li>
@@ -231,7 +231,7 @@
 
                                 <div class="card__front card__side">
                                     <figure class="card__photo-container">
-                                        <img src="images/portfolio/stanley-shop.jpg" alt="The movie app" class="card__photo">
+                                        <img src="/images/portfolio/stanley-shop.jpg" alt="The movie app" class="card__photo">
                                     </figure>
                                     <ul class="card__list">
                                         <li class="card__list__item">
@@ -246,7 +246,7 @@
                                     </ul>
                                 </div>
                                 <div class="card__back card__side">
-                                    <a href="https://stanleytools.com.pl/" class="card__back-btn" target="_blank">zobacz</a>
+                                    <a href="https://stanleytools.com.pl/" class="card__back-btn" target="_blank">go to shop</a>
                                 </div>
                             </div>
                         </li>
@@ -256,7 +256,7 @@
 
                                 <div class="card__front card__side">
                                     <figure class="card__photo-container">
-                                        <img src="images/portfolio/skrawtech-shop.jpg" alt="The movie app" class="card__photo">
+                                        <img src="/images/portfolio/skrawtech-shop.jpg" alt="The movie app" class="card__photo">
                                     </figure>
                                     <ul class="card__list">
                                         <li class="card__list__item">
@@ -271,7 +271,7 @@
                                     </ul>
                                 </div>
                                 <div class="card__back card__side">
-                                    <a href="https://www.skrawtech.pl" class="card__back-btn" target="_blank">zobacz</a>
+                                    <a href="https://www.skrawtech.pl" class="card__back-btn" target="_blank">go to shop</a>
                                 </div>
                             </div>
                         </li>
@@ -281,7 +281,7 @@
 
                                 <div class="card__front card__side">
                                     <figure class="card__photo-container">
-                                        <img src="images/portfolio/wiscop-site.jpg" alt="The movie app" class="card__photo">
+                                        <img src="/images/portfolio/wiscop-site.jpg" alt="The movie app" class="card__photo">
                                     </figure>
                                     <ul class="card__list">
                                         <li class="card__list__item">
@@ -296,7 +296,7 @@
                                     </ul>
                                 </div>
                                 <div class="card__back card__side">
-                                    <a href="https://wiscop.pl/" class="card__back-btn" target="_blank">zobacz</a>
+                                    <a href="https://wiscop.pl/" class="card__back-btn" target="_blank">go to site</a>
                                 </div>
                             </div>
                         </li>
@@ -306,7 +306,7 @@
 
                                 <div class="card__front card__side">
                                     <figure class="card__photo-container">
-                                        <img src="images/portfolio/burger-site.jpg" alt="The movie app" class="card__photo">
+                                        <img src="/images/portfolio/burger-site.jpg" alt="The movie app" class="card__photo">
                                     </figure>
                                     <ul class="card__list">
                                         <li class="card__list__item">
@@ -321,8 +321,8 @@
                                     </ul>
                                 </div>
                                 <div class="card__back card__side">
-                                    <a href="http://piotrjalocha.com/works/burger/index.html" class="card__back-btn" target="_blank">zobacz</a>
-                                    <a href="https://github.com/piotr04j/potfolio__burger" class="card__back-git" target="_blank"><img src="images/github.png" alt="github logo" ></a>
+                                    <a href="http://piotrjalocha.com/works/burger/index.html" class="card__back-btn" target="_blank">go to site</a>
+                                    <a href="https://github.com/piotr04j/potfolio__burger" class="card__back-git" target="_blank"><img src="/images/github.png" alt="github logo" ></a>
                                 </div>
                             </div>
                         </li>
@@ -332,7 +332,7 @@
 
                                 <div class="card__front card__side">
                                     <figure class="card__photo-container">
-                                        <img src="images/portfolio/flex-site.jpg" alt="The movie app" class="card__photo">
+                                        <img src="/images/portfolio/flex-site.jpg" alt="The movie app" class="card__photo">
                                     </figure>
                                     <ul class="card__list">
                                         <li class="card__list__item">
@@ -347,8 +347,8 @@
                                     </ul>
                                 </div>
                                 <div class="card__back card__side">
-                                    <a href="http://piotrjalocha.com/works/flex/index.html" class="card__back-btn" target="_blank">zobacz</a>
-                                    <a href="https://github.com/piotr04j/portoflio__flexbox" class="card__back-git" target="_blank"><img src="images/github.png" alt="github logo" ></a>
+                                    <a href="http://piotrjalocha.com/works/flex/index.html" class="card__back-btn" target="_blank">go to site</a>
+                                    <a href="https://github.com/piotr04j/portoflio__flexbox" class="card__back-git" target="_blank"><img src="/images/github.png" alt="github logo" ></a>
                                 </div>
                             </div>
                         </li>
@@ -367,39 +367,39 @@
     <section class="container-fluid contact" id="contact">
         <div class="row">
             <div class="col-1-of-1">
-                <h3 class="contact__title">Kontakt</h3>
+                <h3 class="contact__title">Contact</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-1-of-1">
                 <div class="contact__container">
                     <form action="/send.php" class="contact__form" id="form-mail">
-                        <input type="email" class="contact__form__mail contact__form__input" name="mail" placeholder="Twój e-mail...">
-                        <textarea class="contact__form__body contact__form__input" name="body" placeholder="Treść wiadomości" rows="4"></textarea>
+                        <input type="email" class="contact__form__mail contact__form__input" name="mail" placeholder="Your e-mail...">
+                        <textarea class="contact__form__body contact__form__input" name="body" placeholder="Your message" rows="4"></textarea>
                         <input type="submit" class="contact__form__send">
                     </form>
                     <div class="contact__info">
-                        <p class="contact__info__text">Sprawdź</p>
+                        <p class="contact__info__text">Social</p>
                         <a href="https://github.com/piotr04j" class="contact__info__link" target="_blank">
                             <svg class="contact__info__icon contact__info__icon-front">
-                                <use xlink:href="images/sprites.svg#github"></use>
+                                <use xlink:href="/images/sprites.svg#github"></use>
                             </svg>
                             <div class="contact__info__icon contact__info__icon-middle">
                                 &nbsp;
                             </div>
                             <svg class="contact__info__icon contact__info__icon-back">
-                                <use xlink:href="images/sprites.svg#github"></use>
+                                <use xlink:href="/images/sprites.svg#github"></use>
                             </svg>
                         </a>
                         <a href="https://www.linkedin.com/in/piotr-ja%C5%82ocha-a759a9146/" class="contact__info__link" target="_blank">
                             <svg class="contact__info__icon  contact__info__icon-front" >
-                                <use xlink:href="images/sprites.svg#linkedin">
+                                <use xlink:href="/images/sprites.svg#linkedin">
                             </svg>
                             <div class="contact__info__icon contact__info__icon-middle">
                                 &nbsp;
                             </div>
                             <svg class="contact__info__icon contact__info__icon-back">
-                                <use xlink:href="images/sprites.svg#linkedin"></use>
+                                <use xlink:href="/images/sprites.svg#linkedin"></use>
                             </svg>
                         </a>
                     </div>

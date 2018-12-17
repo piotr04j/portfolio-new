@@ -1,3 +1,6 @@
-.ie {
-    background-color: red !important;
+.en .navigation__link__lang--active::after{
+    left: 15%;
+}
+.en .navigation__link__lang--inactive::after{
+    right: 15%;
 }
